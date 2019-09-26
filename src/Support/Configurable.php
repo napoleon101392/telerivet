@@ -63,4 +63,14 @@ trait Configurable
 
         return;
     }
+
+    protected function getConfigUrl()
+    {
+        return $this->config['base_url'];
+    }
+
+    protected function getConfigProject()
+    {
+        return $this->config['project_id'];
+    }
 }

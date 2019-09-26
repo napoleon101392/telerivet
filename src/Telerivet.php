@@ -39,14 +39,4 @@ class Telerivet extends Base
     {
         return $this->hook->headers();
     }
-
-    protected function getConfigUrl()
-    {
-        return $this->config['base_url'];
-    }
-
-    protected function getConfigProject()
-    {
-        return $this->config['project_id'];
-    }
 }
