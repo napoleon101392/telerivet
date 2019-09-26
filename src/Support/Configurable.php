@@ -18,7 +18,7 @@ trait Configurable
 
     public function setUp($env)
     {
-        if (!is_null($env)) {
+        if (!empty($env)) {
             $this->validateEnv($env);
 
             $this->config = [

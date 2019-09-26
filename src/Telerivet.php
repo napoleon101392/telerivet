@@ -8,14 +8,12 @@ class Telerivet extends Base
 {
     protected $hook;
 
-    public function __construct(TelerivateInterface $hook, $env = null)
+    public function __construct(TelerivateInterface $hook, $env = [])
     {
         $this->hook = $hook;
 
-        $this->setUp($env);
-
-        if (!empty($this->hook->config)) {
-            $this->setUp($this->hook->config);
+        foreach ([$env, $this->hook->config] as $config) {
+            $this->setUp($config);
         }
     }
 
